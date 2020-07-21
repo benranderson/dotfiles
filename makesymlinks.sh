@@ -6,9 +6,12 @@
 
 ########## Variables
 
-dir=~/dotfiles                    # dotfiles directory
-olddir=~/dotfiles_old             # old dotfiles backup directory
-files="zshrc zpreztorc gitconfig"    # list of files/folders to symlink in homedir
+# dotfiles directory
+dir=~/dotfiles/dotfiles
+# old dotfiles backup directory
+olddir=~/dotfiles_old
+# list of files/folders to symlink in homedir
+files="zlogin zlogout zpreztorc zprofile zshenv zshrc gitconfig update-tools.sh work.sh"
 
 ##########
 

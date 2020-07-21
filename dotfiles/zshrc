@@ -1,0 +1,39 @@
+#
+# Executes commands at the start of an interactive session.
+#
+
+# Source Prezto.
+if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
+  source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
+fi
+
+# pyenv config
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+if command -v pyenv 1>/dev/null 2>&1; then
+ eval "$(pyenv init -)"
+fi
+eval "$(pyenv virtualenv-init -)"
+
+# aliases
+alias git="/usr/local/bin/git"
+alias gcm="git checkout master"
+alias gac="git add -A && git commit -m"
+alias gp="git push"
+alias gnb="git checkout -b"
+alias gdb="git branch -d"
+alias grm="git rebase master"
+alias work="./.work.sh"
+alias update="./.update-tools.sh"
+
+# ensure packages are only installed in an active virtual environment
+export PIP_REQUIRE_VIRTUALENV=true
+
+# pipx config
+export PATH="$PATH:/Users/benranderson/.local/bin"
+
+# load rbenv automatically
+eval "$(rbenv init -)"
+
+# load Azure environment variables
+source ~/.azure.sh
