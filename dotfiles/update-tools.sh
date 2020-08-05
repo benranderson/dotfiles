@@ -11,6 +11,4 @@ else
 fi
 echo "Cleaning up Homebrew..."
 brew cleanup
-echo "Updating pyenv..."
-pyenv update
 echo "Tools updated!"
