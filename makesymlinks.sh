@@ -6,8 +6,10 @@
 
 ########## Variables
 
+# current working directory
+basedir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 # dotfiles directory
-dir=~/dotfiles/dotfiles
+dir=${basedir}/dotfiles
 # old dotfiles backup directory
 olddir=~/dotfiles_old
 # list of files/folders to symlink in homedir
