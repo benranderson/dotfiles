@@ -2,10 +2,9 @@ echo "Updating tools..."
 echo "Updating Homebrew..."
 brew update
 echo "Updating Homebrew packages..."
-OUTPUT=$(brew upgrade)
-echo ${OUTPUT}
-if [[ $OUTPUT == *"Upgrading python."* ]]; then
-    echo "Reinstalling pipx packages due to Python upgrade..."
+brew upgrade | tee /tmp/brew-output.txt
+if grep -q 'Upgrading python' /tmp/brew-output.txt; then
+    echo "Reinstalling pipx packages as Python version has been upgraded..."
     pipx reinstall-all
 else
     echo "Updating pipx..."
