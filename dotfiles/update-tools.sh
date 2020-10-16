@@ -14,4 +14,6 @@ echo "Updating brew casks..."
 brew upgrade --cask
 echo "Cleaning up Homebrew..."
 brew cleanup
+echo "Updating local tldr database..."
+tldr --update
 echo "Tools updated! 🎉"
