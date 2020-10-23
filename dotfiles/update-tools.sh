@@ -11,7 +11,7 @@ else
     pipx upgrade-all
 fi
 echo "Updating brew casks..."
-brew upgrade --cask
+brew upgrade --cask --greedy
 echo "Cleaning up Homebrew..."
 brew cleanup
 echo "Updating local tldr database..."
