@@ -8,5 +8,5 @@ open -a Microsoft\ Teams
 echo "Opening Notion..."
 open -a Notion
 echo "Opening FastPipe in VS Code..."
-code /Users/benranderson/Documents/dev/work/tmfc/fastpipe
+code /Users/benranderson/Documents/dev/fastpipe
 echo "Workspace set up!"
