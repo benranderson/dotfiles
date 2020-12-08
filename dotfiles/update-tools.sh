@@ -4,7 +4,7 @@ brew update
 echo "Updating Homebrew packages..."
 brew upgrade --display-times
 echo "Updating pipx..."
-pipx upgrade-all
+pipx upgrade-all || pipx reinstall-all
 echo "Updating brew casks..."
 brew upgrade --cask --greedy
 echo "Cleaning up Homebrew..."
