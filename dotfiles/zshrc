@@ -15,11 +15,6 @@ if which pyenv-virtualenv-init > /dev/null; then
   eval "$(pyenv virtualenv-init -)"
 fi
 
-# https://github.com/pyenv/pyenv/issues/1219#issuecomment-684140087
-export PYTHON_CONFIGURE_OPTS="--with-openssl=$(brew --prefix openssl)"
-export CFLAGS="-I$(brew --prefix zlib)/include -I$(brew --prefix sqlite)/include -I$(brew --prefix bzip2)/include"
-export LDFLAGS="-L$(brew --prefix zlib)/lib -L$(brew --prefix sqlite)/lib -L$(brew --prefix bzip2)/lib"
-
 # aliases
 alias git="/usr/local/bin/git"
 alias gcm="git checkout master"
@@ -36,6 +31,3 @@ export PIP_REQUIRE_VIRTUALENV=true
 
 # pipx config
 export PATH="$PATH:/Users/benranderson/.local/bin"
-
-# load Azure environment variables
-source ~/.azure.sh
