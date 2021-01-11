@@ -15,6 +15,12 @@ if which pyenv-virtualenv-init > /dev/null; then
   eval "$(pyenv virtualenv-init -)"
 fi
 
+# ensure packages are only installed in an active virtual environment
+export PIP_REQUIRE_VIRTUALENV=true
+
+# pipx config
+export PATH="$PATH:/Users/benranderson/.local/bin"
+
 # aliases
 alias git="/usr/local/bin/git"
 alias gcm="git checkout master"
@@ -26,8 +32,10 @@ alias grm="git rebase master"
 alias work="./.work.sh"
 alias update="./.update-tools.sh"
 
-# ensure packages are only installed in an active virtual environment
-export PIP_REQUIRE_VIRTUALENV=true
-
-# pipx config
-export PATH="$PATH:/Users/benranderson/.local/bin"
+# functions
+venv() {
+    # create virtual env $1, activate it and update pip version
+    pyenv virtualenv "$1"
+    pyenv local "$1"
+    pip install -U pip
+}
