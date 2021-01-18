@@ -15,8 +15,11 @@ if which pyenv-virtualenv-init > /dev/null; then
   eval "$(pyenv virtualenv-init -)"
 fi
 
+# set environment variables
 # ensure packages are only installed in an active virtual environment
 export PIP_REQUIRE_VIRTUALENV=true
+# enable colorized output for howdoi
+export HOWDOI_COLORIZE=1
 
 # pipx config
 export PATH="$PATH:/Users/benranderson/.local/bin"
