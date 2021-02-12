@@ -9,6 +9,10 @@ echo "Opening Microsoft Teams..."
 open -a Microsoft\ Teams
 echo "Opening Notion..."
 open -a Notion
+echo "Opening Tasks spreadsheet..."
+open /Users/benranderson/OneDrive\ -\ TECHNIPFMC/Management/Tasks.xlsx
+echo "Opening Work Review document..."
+open /Users/benranderson/OneDrive\ -\ TECHNIPFMC/Management/Work\ Review.docx
 echo "Opening FastPipe in VS Code..."
 code /Users/benranderson/Documents/dev/fastpipe
 echo "Workspace set up!"
