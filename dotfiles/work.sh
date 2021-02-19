@@ -7,8 +7,6 @@ echo "Opening Microsoft Outlook..."
 open -a Microsoft\ Outlook
 echo "Opening Microsoft Teams..."
 open -a Microsoft\ Teams
-echo "Opening Notion..."
-open -a Notion
 echo "Opening Tasks spreadsheet..."
 open /Users/benranderson/OneDrive\ -\ TECHNIPFMC/Management/Tasks.xlsx
 echo "Opening Work Review document..."
