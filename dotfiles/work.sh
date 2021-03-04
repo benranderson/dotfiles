@@ -8,9 +8,7 @@ open -a Microsoft\ Outlook
 echo "Opening Microsoft Teams..."
 open -a Microsoft\ Teams
 echo "Opening Tasks spreadsheet..."
-open /Users/benranderson/OneDrive\ -\ TECHNIPFMC/Management/Tasks.xlsx
-echo "Opening Work Review document..."
-open /Users/benranderson/OneDrive\ -\ TECHNIPFMC/Management/Work\ Review.docx
+open /Users/benranderson/OneDrive\ -\ Digicorner/Documents/Management/Tasks.xlsx
 echo "Opening FastPipe in VS Code..."
 code /Users/benranderson/Documents/dev/fastpipe
 echo "Workspace set up!"
