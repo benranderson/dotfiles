@@ -26,10 +26,10 @@ export PATH="$PATH:/Users/benranderson/.local/bin"
 
 # aliases
 alias git="/usr/local/bin/git"
-alias gcm="git checkout master"
+alias gsm="git switch master"
 alias gac="git add -A && git commit -m"
 alias gp="git push --follow-tags"
-alias gnb="git checkout -b"
+alias gnb="git switch -c"
 alias gdb="git branch -d"
 alias grm="git rebase master"
 alias plo="pip list --outdated"
