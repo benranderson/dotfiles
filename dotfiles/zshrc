@@ -34,6 +34,7 @@ alias gnb="git switch -c"
 alias gdb="git branch -D"
 alias grm="git rebase master"
 alias plo="pip list --outdated"
+alias gfp="git fetch --prune"
 alias work="./.work.sh"
 alias update="./.update-tools.sh"
 
