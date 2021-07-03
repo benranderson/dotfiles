@@ -6,7 +6,7 @@ open -a Microsoft\ Outlook
 echo "Opening Microsoft Teams..."
 open -a Microsoft\ Teams
 echo "Opening Tasks spreadsheet..."
-open /Users/benranderson/OneDrive\ -\ Digicorner/Management/Tasks.xlsx
+open /Users/benranderson/OneDrive/Obsidian/Vault/Work/Tasks.xlsx
 echo "Opening Obsidian..."
 open -a Obsidian
 echo "Opening FastPipe in VS Code..."
