@@ -40,9 +40,7 @@ zstyle ':prezto:load' pmodule \
   'completion' \
   'syntax-highlighting' \
   'history-substring-search' \
-  'autosuggestions' \
-  'prompt' \
-  'docker'
+  'prompt'
 
 #
 # Autosuggestions
@@ -51,14 +49,11 @@ zstyle ':prezto:load' pmodule \
 # Set the query found color.
 # zstyle ':prezto:module:autosuggestions:color' found ''
 
-# enable highlighting
-zstyle ':prezto:module:autosuggestions' color 'yes'
-
 #
 # Completions
 #
 
-# Set the entries to ignore in static */etc/hosts* for host completion.
+# Set the entries to ignore in static '/etc/hosts' for host completion.
 # zstyle ':prezto:module:completion:*:hosts' etc-host-ignores \
 #   '0.0.0.0' '127.0.0.1'
 
