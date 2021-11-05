@@ -41,6 +41,11 @@ alias plo="pip list --outdated"
 alias gfp="git fetch --prune"
 alias work="./.work.sh"
 alias update="./.update-tools.sh"
+alias ifp='venv subseadesign
+pip install keyring artifacts-keyring
+pip config --site set global.extra-index-url https://pkgs.dev.azure.com/technipfmc-dev/SubseaDesign/_packaging/SubseaDesignFeed/pypi/simple/
+pip install fastpipe
+fastpipe -V'
 
 # functions
 venv() {
