@@ -54,3 +54,6 @@ venv() {
     pyenv local "$1"
     pip install -U pip
 }
+
+# initialise mcfly
+eval "$(mcfly init zsh)"
