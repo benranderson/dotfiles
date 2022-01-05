@@ -42,7 +42,8 @@ zstyle ':prezto:load' pmodule \
   'history-substring-search' \
   'autosuggestions' \
   'prompt' \
-  'docker'
+  'docker' \
+  'osx'
 
 #
 # Autosuggestions
