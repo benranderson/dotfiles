@@ -10,5 +10,5 @@ open /Users/benranderson/OneDrive\ -\ Digicorner/Management/Tasks.xlsx
 echo "Opening Obsidian..."
 open -a Obsidian
 echo "Opening FastPipe in VS Code..."
-code /Users/benranderson/Documents/dev/fastpipe
+code /Users/benranderson/Documents/dev/work/fastpipe
 echo "Workspace set up!"
