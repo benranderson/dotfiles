@@ -40,6 +40,7 @@ alias grd="git rebase develop"
 alias grm="git rebase master"
 alias plo="pip list --outdated"
 alias gfp="git fetch --prune"
+alias term="open -a Terminal"
 alias work="./.work.sh"
 alias update="./.update-tools.sh"
 alias ifp='venv subseadesign
@@ -63,7 +64,7 @@ eval "$(mcfly init zsh)"
 autoload -U +X bashcompinit && bashcompinit
 complete -o nospace -C /usr/local/bin/terraform terraform
 
-# pip zsh completion start
+# pip zsh completion
 function _pip_completion {
   local words cword
   read -Ac words
@@ -73,4 +74,7 @@ function _pip_completion {
              PIP_AUTO_COMPLETE=1 $words[1] 2>/dev/null ))
 }
 compctl -K _pip_completion pip
-# pip zsh completion end
+
+# add openjdk (Java) to path
+export PATH="/usr/local/opt/openjdk/bin:$PATH"
+export CPPFLAGS="-I/usr/local/opt/openjdk/include"
