@@ -57,9 +57,6 @@ venv() {
     pip install -U pip
 }
 
-# initialise mcfly
-eval "$(mcfly init zsh)"
-
 # enable tab completion for Terraform commands
 autoload -U +X bashcompinit && bashcompinit
 complete -o nospace -C /usr/local/bin/terraform terraform
