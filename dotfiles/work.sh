@@ -1,6 +1,6 @@
 echo "Setting up workspace..."
 echo "Opening Azure Boards"
-open -a Safari https://dev.azure.com/technipfmc-dev/SubseaDesign/_boards/board/t/Pipelines%20Team/Backlog%20items
+open -a Safari https://dev.azure.com/technipfmc-dev/SubseaDesign/_boards/board/t/FastPipe%20Team
 echo "Opening Microsoft Outlook..."
 open -a Microsoft\ Outlook
 echo "Opening Microsoft Teams..."
