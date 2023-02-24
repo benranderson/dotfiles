@@ -38,6 +38,9 @@ alias gdb="git branch -D"
 alias grb="git branch -m"
 alias grd="git rebase develop"
 alias grm="git rebase master"
+# undo last commit
+alias guc="git reset --soft HEAD~1"
+# list outdated python packages
 alias plo="pip list --outdated"
 alias gfp="git fetch --prune"
 alias term="open -a Terminal"
