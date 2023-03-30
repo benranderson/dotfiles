@@ -42,7 +42,11 @@ alias grm="git rebase master"
 alias guc="git reset --soft HEAD~1"
 # list outdated python packages
 alias plo="pip list --outdated"
+# remove information on branches that were deleted on origin
 alias gfp="git fetch --prune"
+# list commit messages since branch creation
+alias glc='git log --oneline --format="- %s" develop..'
+# open terminal a current working directory
 alias term="open -a Terminal"
 alias work="./.work.sh"
 alias update="./.update-tools.sh"
