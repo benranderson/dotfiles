@@ -1,14 +1,11 @@
 #
 # Executes commands at the start of an interactive session.
 #
-# Authors:
-#   Sorin Ionescu <sorin.ionescu@gmail.com>
-#
 
 # activate homebrew
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
-# Source Prezto
+# source Prezto
 if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 fi
@@ -28,15 +25,27 @@ export HOWDOI_COLORIZE=1
 export PATH="$PATH:/Users/benranderson/.local/bin"
 
 # aliases
+# swtich to branch
 alias gs="git switch"
-alias gac="git add -A && git commit -m"
-alias gpl="git pull"
-alias gp="git push --follow-tags"
-alias gp1="git push --set-upstream origin"
+# switch to new branch
 alias gnb="git switch -c"
+# stage and commit all chnages
+alias gac="git add -A && git commit -m"
+# pull updates from origin
+alias gpl="git pull"
+# push all changes, including tags, to origin
+alias gp="git push --follow-tags"
+# push new branch to origin
+alias gp1="git push --set-upstream origin"
+# delete local branch
 alias gdb="git branch -D"
+# delete online branch
+alias gdob="git push origin -d"
+# rename branch
 alias grb="git branch -m"
+# rebase current branch on develop branch
 alias grd="git rebase develop"
+# rebase current branch on master branch
 alias grm="git rebase master"
 # undo last commit
 alias guc="git reset --soft HEAD~1"
@@ -48,7 +57,9 @@ alias gfp="git fetch --prune"
 alias glc='git log --oneline --format="- %s" develop..'
 # open terminal a current working directory
 alias term="open -a Terminal"
+# run script to open work apps
 alias work="./.work.sh"
+# run script to update tools
 alias update="./.update-tools.sh"
 # uninstall all python libraries
 alias pua="pip uninstall -y -r <(pip freeze)"
