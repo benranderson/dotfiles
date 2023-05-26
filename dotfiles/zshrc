@@ -36,7 +36,7 @@ alias gpl="git pull"
 # push all changes, including tags, to origin
 alias gp="git push --follow-tags"
 # push new branch to origin
-alias gp1="git push --set-upstream origin `git branch --show-current`"
+alias gp1="git push --set-upstream origin"
 # delete local branch
 alias gdb="git branch -D"
 # delete online branch
