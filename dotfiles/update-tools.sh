@@ -1,14 +1,19 @@
-echo "Updating tools..."
-echo "Updating Homebrew..."
+BLUE=$(tput setaf 4)
+GREEN=$(tput setaf 2)
+RESET=$(tput sgr0)
+echo ${BLUE}"Updating tools..."${RESET}
+echo ${BLUE}"Updating brew..."${RESET}
 brew update
-echo "Updating Homebrew packages..."
+echo ${BLUE}"Listing outdated brew casks and formulae..."${RESET}
+brew outdated
+echo ${BLUE}"Updating brew packages..."${RESET}
 brew upgrade --display-times
-echo "Updating pipx..."
+echo ${BLUE}"Updating pipx..."${RESET}
 pipx upgrade-all || pipx reinstall-all
-echo "Updating brew casks..."
+echo ${BLUE}"Updating brew casks..."${RESET}
 brew upgrade --cask --greedy
-echo "Cleaning up Homebrew..."
+echo ${BLUE}"Cleaning up brew..."${RESET}
 brew cleanup
-echo "Updating local tldr database..."
+echo ${BLUE}"Updating local tldr database..."${RESET}
 tldr --update
-echo "Tools updated! 🎉"
+echo ${GREEN}"Tools updated! 🎉"${RESET}
