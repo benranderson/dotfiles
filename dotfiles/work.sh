@@ -9,6 +9,6 @@ echo "Opening Tasks spreadsheet..."
 open /Users/benranderson/OneDrive\ -\ Digicorner/Management/Tasks.xlsx
 echo "Opening Obsidian..."
 open -a Obsidian
-echo "Opening FastPipe in VS Code..."
-code /Users/benranderson/Documents/dev/work/fastpipe
+echo "Opening digital workspace in VS Code..."
+code /Users/benranderson/Documents/dev/work/digital.code-workspace
 echo "Workspace set up!"
