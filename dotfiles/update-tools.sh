@@ -5,9 +5,9 @@ echo ${BLUE}"Updating tools..."${RESET}
 echo ${BLUE}"Updating brew..."${RESET}
 brew update
 echo ${BLUE}"Updating brew packages..."${RESET}
-brew upgrade --display-times --verbose
+brew upgrade --display-times
 echo ${BLUE}"Updating brew casks..."${RESET}
-brew upgrade --cask --greedy --verbose
+brew upgrade --cask --greedy
 echo ${BLUE}"Updating pipx..."${RESET}
 pipx upgrade-all || pipx reinstall-all
 echo ${BLUE}"Cleaning up brew..."${RESET}
