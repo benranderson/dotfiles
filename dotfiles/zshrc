@@ -90,3 +90,6 @@ compctl -K _pip_completion pip
 # add openjdk (Java) to path
 export PATH="/usr/local/opt/openjdk/bin:$PATH"
 export CPPFLAGS="-I/usr/local/opt/openjdk/include"
+
+# configure SnowSQL
+alias snowsql=/Applications/SnowSQL.app/Contents/MacOS/snowsql

@@ -5,6 +5,8 @@ echo "Opening Microsoft Outlook..."
 open -a "Microsoft Outlook"
 echo "Opening Microsoft Teams..."
 open -a "Microsoft Teams (work or school)"
+echo "Opening Slack..."
+open -a Slack
 echo "Opening Tasks spreadsheet..."
 open "/Users/benranderson/OneDrive - Digicorner/Management/Tasks.xlsx"
 echo "Opening Obsidian..."
