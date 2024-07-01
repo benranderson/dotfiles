@@ -4,7 +4,7 @@ open -a Safari https://dev.azure.com/technipfmc-dev/SubseaDesign/_boards/board/t
 echo "Opening Microsoft Outlook..."
 open -a "Microsoft Outlook"
 echo "Opening Microsoft Teams..."
-open -a "Microsoft Teams (work or school)"
+open -a "Microsoft Teams"
 echo "Opening Slack..."
 open -a Slack
 echo "Opening Tasks spreadsheet..."

@@ -93,3 +93,6 @@ export CPPFLAGS="-I/usr/local/opt/openjdk/include"
 
 # configure SnowSQL
 alias snowsql=/Applications/SnowSQL.app/Contents/MacOS/snowsql
+
+# cofigure AWS CLI
+export PATH="/Users/benranderson/Documents/dev/github/dev-tools:$PATH"
