@@ -12,5 +12,5 @@ open "/Users/benranderson/OneDrive - Digicorner/Management/Tasks.xlsx"
 echo "Opening Obsidian..."
 open -a Obsidian
 echo "Opening digital workspace in VS Code..."
-code /Users/benranderson/Documents/dev/work/digital.code-workspace
+code /Users/benranderson/Documents/dev/digital.code-workspace
 echo "Workspace set up!"
