@@ -63,6 +63,8 @@ alias work="./.work.sh"
 alias update="./.update-tools.sh"
 # uninstall all python libraries
 alias pua="pip uninstall -y -r <(pip freeze)"
+# run pre-commit hooks on all files
+alias pcra="pre-commit run --all-files"
 
 # functions
 venv() {
