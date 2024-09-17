@@ -10,12 +10,6 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 fi
 
-# pyenv config
-export PYENV_ROOT="$HOME/.pyenv"
-command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init -)"
-eval "$(pyenv virtualenv-init -)"
-
 # set environment variables
 # ensure packages are only installed in an active virtual environment
 export PIP_REQUIRE_VIRTUALENV=true
@@ -66,18 +60,6 @@ alias pua="pip uninstall -y -r <(pip freeze)"
 # run pre-commit hooks on all files
 alias pcra="pre-commit run --all-files"
 
-# functions
-venv() {
-    # create virtual env $1, activate it and update pip version
-    pyenv virtualenv "$1"
-    pyenv local "$1"
-    pip install -U pip
-}
-
-# enable tab completion for Terraform commands
-autoload -U +X bashcompinit && bashcompinit
-complete -o nospace -C /usr/local/bin/terraform terraform
-
 # pip zsh completion
 function _pip_completion {
   local words cword
@@ -88,10 +70,6 @@ function _pip_completion {
              PIP_AUTO_COMPLETE=1 $words[1] 2>/dev/null ))
 }
 compctl -K _pip_completion pip
-
-# add openjdk (Java) to path
-export PATH="/usr/local/opt/openjdk/bin:$PATH"
-export CPPFLAGS="-I/usr/local/opt/openjdk/include"
 
 # configure SnowSQL
 alias snowsql=/Applications/SnowSQL.app/Contents/MacOS/snowsql
