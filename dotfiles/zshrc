@@ -65,6 +65,8 @@ alias update="./.update-tools.sh"
 alias pua="pip uninstall -y -r <(pip freeze)"
 # run pre-commit hooks on all files
 alias pcra="pre-commit run --all-files"
+# get ip address of primary network interface
+alias gip="ipconfig getifaddr en0"
 
 # functions
 venv() {
