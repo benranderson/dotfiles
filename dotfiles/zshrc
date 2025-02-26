@@ -10,11 +10,8 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 fi
 
-# set environment variables
 # ensure packages are only installed in an active virtual environment
 export PIP_REQUIRE_VIRTUALENV=true
-# pipx config
-export PATH="$PATH:/Users/benranderson/.local/bin"
 
 # aliases
 # swtich to branch
@@ -42,7 +39,7 @@ alias grm="git rebase master"
 # undo last commit
 alias guc="git reset --soft HEAD~1"
 # list outdated python packages
-alias plo="pip list --outdated"
+alias plo="uv pip list --outdated"
 # remove information on branches that were deleted on origin
 alias gfp="git fetch --prune"
 # list commit messages since branch creation
@@ -56,7 +53,7 @@ alias update="./.update-tools.sh"
 # uninstall all python libraries
 alias pua="pip uninstall -y -r <(pip freeze)"
 # run pre-commit hooks on all files
-alias pcra="pre-commit run --all-files"
+alias pcra="uv run pre-commit run --all-files"
 # get ip address of primary network interface
 alias gip="ipconfig getifaddr en0"
 
@@ -75,7 +72,7 @@ compctl -K _pip_completion pip
 # configure SnowSQL
 alias snowsql=/Applications/SnowSQL.app/Contents/MacOS/snowsql
 
-# cofigure AWS CLI
+# configure AWS CLI
 export PATH="/Users/benranderson/Documents/dev/github/dev-tools:$PATH"
 
 # configure ruby
