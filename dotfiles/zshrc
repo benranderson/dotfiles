@@ -12,6 +12,7 @@ fi
 
 # ensure packages are only installed in an active virtual environment
 export PIP_REQUIRE_VIRTUALENV=true
+export PATH="$PATH:/Users/benranderson/.local/bin"
 
 # aliases
 # swtich to branch
