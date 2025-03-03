@@ -4,10 +4,8 @@ RESET=$(tput sgr0)
 echo ${BLUE}"Updating tools..."${RESET}
 echo ${BLUE}"Updating brew..."${RESET}
 brew update
-echo ${BLUE}"Updating brew packages..."${RESET}
-brew upgrade --display-times
-echo ${BLUE}"Updating brew casks..."${RESET}
-brew upgrade --cask --greedy
+echo ${BLUE}"Updating brew formulae and casks..."${RESET}
+brew upgrade --display-times --greedy
 echo ${BLUE}"Cleaning up brew..."${RESET}
 brew cleanup
 echo ${BLUE}"Updating uv tools..."${RESET}
