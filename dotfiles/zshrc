@@ -76,3 +76,6 @@ export PATH="/Users/benranderson/Documents/dev/github/dev-tools:$PATH"
 
 # configure ruby
 export PATH="/opt/homebrew/opt/ruby/bin:$PATH"
+
+# configure postgresql
+export PATH="/opt/homebrew/opt/postgresql@15/bin:$PATH"
