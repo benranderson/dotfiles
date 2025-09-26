@@ -19,8 +19,8 @@ export PATH="$PATH:/Users/benranderson/.local/bin"
 alias gs="git switch"
 # switch to new branch
 alias gnb="git switch -c"
-# stage and commit all chnages
-alias gac="git add -A && git commit -m"
+# stage and commit all changes
+alias gac="git add -A && uv run git commit -m"
 # pull updates from origin
 alias gpl="git pull"
 # push all changes, including tags, to origin

@@ -5,7 +5,15 @@ echo ${BLUE}"Updating tools..."${RESET}
 echo ${BLUE}"Updating brew..."${RESET}
 brew update
 echo ${BLUE}"Updating brew formulae and casks..."${RESET}
-brew upgrade --display-times --greedy
+# handle confirmation prompt
+expect <<'EOF'
+set timeout -1
+spawn brew upgrade --display-times --greedy
+expect {
+  -re "Yes/No:" { send "Yes\r"; exp_continue }
+  eof
+}
+EOF
 echo ${BLUE}"Cleaning up brew..."${RESET}
 brew cleanup
 echo ${BLUE}"Updating uv tools..."${RESET}
