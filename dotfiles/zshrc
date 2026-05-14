@@ -49,6 +49,8 @@ alias term="open -a Terminal"
 alias work="./.work.sh"
 # run script to update tools
 alias update="./.update-tools.sh"
+# run script to clear caches
+alias clearcaches="./.clear-caches.sh"
 # uninstall all python libraries
 alias pua="pip uninstall -y -r <(pip freeze)"
 # run pre-commit hooks on all files

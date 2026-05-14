@@ -12,8 +12,6 @@ basedir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 dir=${basedir}/dotfiles
 # old dotfiles backup directory
 olddir=~/dotfiles_old
-# list of files/folders to symlink in homedir
-files="zlogin zlogout zpreztorc zprofile zshenv zshrc gitconfig update-tools.sh work.sh"
 
 ##########
 
@@ -28,9 +26,12 @@ cd $dir
 echo "...done"
 
 # move any existing dotfiles in homedir to dotfiles_old directory, then create symlinks 
-for file in $files; do
+for file in *; do
     echo "Moving any existing dotfiles from ~ to $olddir"
     mv ~/.$file ~/dotfiles_old/
     echo "Creating symlink to $file in home directory."
     ln -sv $dir/$file ~/.$file
+    if [[ $file == *.sh ]]; then
+        chmod +x ~/.$file
+    fi
 done
