@@ -31,10 +31,8 @@ alias gdb="git branch -D"
 alias gdob="git push origin -d"
 # rename branch
 alias grb="git branch -m"
-# rebase current branch on develop branch
-alias grd="git rebase develop"
-# rebase current branch on master branch
-alias grm="git rebase master"
+# rebase current branch on main branch
+alias grm="git rebase main"
 # undo last commit
 alias guc="git reset --soft HEAD~1"
 # list outdated python packages
