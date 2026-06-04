@@ -49,10 +49,8 @@ alias work="./.work.sh"
 alias update="./.update-tools.sh"
 # run script to clear caches
 alias clearcaches="./.clear-caches.sh"
-# uninstall all python libraries
-alias pua="pip uninstall -y -r <(pip freeze)"
 # run pre-commit hooks on all files
-alias pcra="uv run pre-commit run --all-files"
+alias pra="prek run --all-files"
 # get ip address of primary network interface
 alias gip="ipconfig getifaddr en0"
 
