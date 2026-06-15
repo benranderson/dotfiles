@@ -5,12 +5,12 @@ echo ${BLUE}"Updating tools..."${RESET}
 echo ${BLUE}"Updating brew..."${RESET}
 brew update
 echo ${BLUE}"Updating brew formulae and casks..."${RESET}
-# handle confirmation prompt
 expect <<'EOF'
 set timeout -1
 spawn brew upgrade --display-times --greedy
 expect {
-  -re "Yes/No:" { send "Yes\r"; exp_continue }
+  -re {\[y/n\]} { send "y\r"; exp_continue }
+  -re {Yes/No} { send "Yes\r"; exp_continue }
   eof
 }
 EOF
