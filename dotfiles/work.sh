@@ -1,8 +1,8 @@
 echo "Setting up workspace..."
-echo "Opening GitHub organisation..."
-open -a Safari https://github.com/tfmc-rgic
-echo "Opening Azure Boards..."
-open -a Safari https://dev.azure.com/technipfmc-dev/SubseaDesign/_boards/board/t/Developers
+echo "Opening pace GitHub project..."
+open -a Safari https://github.com/orgs/tfmc-rgic/projects/16
+echo "Opening pace-ui GitHub project..."
+open -a Safari https://github.com/orgs/tfmcdigital/projects/41
 echo "Opening Microsoft Outlook..."
 open -a "Microsoft Outlook"
 echo "Opening Microsoft Teams..."

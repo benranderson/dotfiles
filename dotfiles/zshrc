@@ -35,6 +35,8 @@ alias grb="git branch -m"
 alias grm="git rebase main"
 # undo last commit
 alias guc="git reset --soft HEAD~1"
+# list commits on current branch since main
+alias lsc="git --no-pager log main..HEAD --oneline"
 # list outdated python packages
 alias plo="uv pip list --outdated"
 # remove information on branches that were deleted on origin
@@ -77,3 +79,8 @@ export PATH="/opt/homebrew/opt/ruby/bin:$PATH"
 
 # configure postgresql
 export PATH="/opt/homebrew/opt/postgresql@15/bin:$PATH"
+
+# configure nvm (lazy-loaded for faster shell startup)
+export NVM_DIR="$HOME/.nvm"
+[ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh" --no-use
+[ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"
