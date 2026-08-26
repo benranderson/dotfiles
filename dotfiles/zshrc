@@ -42,7 +42,7 @@ alias plo="uv pip list --outdated"
 # remove information on branches that were deleted on origin
 alias gfp="git fetch --prune"
 # list commit messages since branch creation
-alias glc='git log --oneline --format="- %s" develop..'
+alias glc='git log --oneline --format="- %s" main..'
 # open terminal a current working directory
 alias term="open -a Terminal"
 # run script to open work apps
