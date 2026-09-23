@@ -1,0 +1,6 @@
+#!/bin/sh
+# git push-and-deploy - push the current branch, then run its test workflow
+set -e
+
+git push
+gh workflow run "Test branch changes" --ref "$(git rev-parse --abbrev-ref HEAD)"

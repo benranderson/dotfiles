@@ -24,3 +24,5 @@
 	autocorrect = prompt
 [commit]
 	verbose = true
+[core]
+	autocrlf = false

@@ -1,0 +1,17 @@
+#!/bin/sh
+# git last-runs [N] - recent GitHub Actions runs for the current repo
+
+GH_PAGER=cat gh api "repos/{owner}/{repo}/actions/runs?per_page=${1:-5}" \
+	--template '
+		{{- tablerow "BRANCH" "ACTOR" "TIMESTAMP" "WORKFLOW" "TRIGGER" "STATUS" "RUN ID" -}}
+		{{- range .workflow_runs -}}
+			{{- tablerow
+				.head_branch
+				.triggering_actor.login
+				(timefmt "02/01/2006 15:04" .created_at)
+				.name
+				.event
+				(or .conclusion .status)
+				.id -}}
+		{{- end -}}
+	'
