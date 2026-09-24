@@ -19,6 +19,10 @@ export PATH="$PATH:/Users/benranderson/.local/bin:/Users/benranderson/dev/github
 alias gs="git switch"
 # switch to new branch
 alias gnb="git switch -c"
+# create worktree and open it; branches off HEAD, or checks out $1 if it already exists
+gwa() { git worktree add ".worktrees/$1" && code ".worktrees/$1"; }
+# remove worktree and branch; extra args pass to git worktree remove, e.g. gwr foo --force
+gwr() { local b=$1; shift; git worktree remove "$@" ".worktrees/$b" && git branch -d "$b"; }
 # stage and commit all changes
 alias gac="git add -A && uv run git commit -m"
 # pull updates from origin
