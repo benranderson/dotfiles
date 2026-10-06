@@ -22,4 +22,6 @@ echo ${BLUE}"Updating uv tools..."${RESET}
 export UV_KEYRING_PROVIDER=subprocess
 export UV_INDEX=https://VssSessionToken@pkgs.dev.azure.com/technipfmc-dev/SubseaDesign/_packaging/SubseaDesignFeed/pypi/simple/
 uv tool upgrade --all
+echo ${BLUE}"Updating pi and all extensions..."${RESET}
+pi update --all
 echo ${GREEN}"Tools updated! 🎉"${RESET}
