@@ -59,7 +59,8 @@ alias clearcaches="./.clear-caches.sh"
 alias pra="prek run --all-files"
 # get ip address of primary network interface
 alias gip="ipconfig getifaddr en0"
-
+# run learn AI learning system in pi
+alias learn='cd ~/Library/Mobile\ Documents/iCloud~md~obsidian/Documents/Vault/π/learn && pi'
 
 # pip zsh completion
 function _pip_completion {
