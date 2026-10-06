@@ -1,53 +1,69 @@
 # dotfiles
 
-## Instructions
-
-Make set up file executable:
+## Setup
 
 ```bash
 chmod 755 makesymlinks.sh
+./makesymlinks.sh
 ```
 
-Then run:
+## Updating Prezto
 
 ```bash
-./makesymlinks.sh
+zprezto-update
+```
+
+Prezto ships this function. It pulls the latest changes and syncs submodules, then points you at `$ZPREZTODIR` to resolve any conflicts yourself.
+
+By hand:
+
+```bash
+cd $ZPREZTODIR
+git pull
+git submodule sync --recursive
+git submodule update --init --recursive
+```
+
+The files in `dotfiles/` are forked from Prezto's templates in `runcoms/`. Prezto's own install symlinks those templates directly from its clone, so a pull updates them in place. This repo keeps edited copies, which a pull never touches. After updating, diff them and port across anything that changed:
+
+```bash
+for f in zshenv zprofile zshrc zpreztorc zlogin zlogout; do
+  diff "${ZPREZTODIR:-$HOME/.zprezto}/runcoms/$f" "dotfiles/$f"
+done
+```
+
+Then start a fresh login shell to check nothing broke:
+
+```bash
+zsh -li
 ```
 
 ## Files
 
 ### zshenv
 
-This file is sourced by all instances of Zsh, and thus, it should be kept as
-small as possible and should only define environment variables.
+Sourced by every instance of Zsh, so keep it small and limit it to environment variables.
 
 ### zprofile
 
-This file is similar to _zlogin_, but it is sourced before _zshrc_. It was added
-for KornShell fans. See the description of _zlogin_ below for what it may
-contain.
+Like _zlogin_, but sourced before _zshrc_. Added for KornShell fans. See _zlogin_ below for what it can hold.
 
-_zprofile_ and _zlogin_ are not meant to be used together but can be done so.
+The two aren't meant to be used together, though they can be.
 
 ### zshrc
 
-This file is sourced by interactive shells. It should define aliases, functions,
-shell options, and key bindings.
+Sourced by interactive shells. Aliases, functions, shell options, key bindings.
 
 ### zpreztorc
 
-This file configures Prezto.
+Configures Prezto.
 
 ### zlogin
 
-This file is sourced by login shells after _zshrc_. Thus, it should contain
-commands that need to execute at login. It is usually used for messages such as
-[_`fortune`_][3], [_`msgs`_][4], or for the creation of files.
+Sourced by login shells after _zshrc_, for commands that need to run at login - messages such as `fortune` or `msgs`, or creating files.
 
-This is not the file to define aliases, functions, shell options, and key
-bindings. It should not change the shell environment.
+Not the place for aliases, functions, shell options, or key bindings. It should not change the shell environment.
 
 ### zlogout
 
-This file is sourced by login shells during logout. It should be used for
-displaying messages and for deletion of files.
+Sourced by login shells at logout, for displaying messages and deleting files.
