@@ -1,5 +1,24 @@
 # dotfiles
 
+## Overview
+
+```mermaid
+flowchart TD
+    upstream["sorin-ionescu/prezto<br/>(upstream)"]
+    clone["~/.zprezto<br/>(local clone)"]
+    runcoms["~/.zprezto/runcoms/<br/>(templates)"]
+    repo["this repo<br/>dotfiles/"]
+    home["~/.zshrc, ~/.zpreztorc, ...<br/>(symlinks)"]
+
+    upstream -->|"git pull / zprezto-update"| clone
+    clone --> runcoms
+    runcoms -.->|"copied once, then edited by hand"| repo
+    runcoms -.->|"diff after each update"| repo
+    repo -->|"makesymlinks.sh"| home
+```
+
+Solid arrows are automatic. Dashed arrows are manual - a Prezto update never touches the copies in this repo.
+
 ## Setup
 
 ```bash
