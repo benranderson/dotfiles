@@ -24,4 +24,6 @@ export UV_INDEX=https://VssSessionToken@pkgs.dev.azure.com/technipfmc-dev/Subsea
 uv tool upgrade --all
 echo ${BLUE}"Updating pi and all extensions..."${RESET}
 pi update --all
+echo ${BLUE}"Updating global npx skills..."${RESET}
+npx skills@latest update -g
 echo ${GREEN}"Tools updated! 🎉"${RESET}
